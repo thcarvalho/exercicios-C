@@ -7,17 +7,22 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	
-	float mul,kg;
+	float alt,pes;
+	char sexo[9];
 	
-	printf("Informe o peso total dos peixes:");
-	scanf("%f",&kg);
+	printf("Informe sua altura:");
+	scanf("%f",&alt);
 	
-	if(kg <= 50){
-		printf("\nNão haverá multa\n");
+	printf("Informe seu sexo:");
+	scanf("%s",&sexo);
+	
+	if(strcmp(sexo,"masculino")==0){
+		pes = (72.7*alt)-58;
 	}else{
-		mul = (kg - 50)*4;
-		printf("\nA multa a ser cobrada é de: %.1f reais\n",mul);
+		pes = (62.1*alt)-44.7;
 	}
+	
+	printf("Seu peso ideal é: %.1f\n",pes);
 	system("PAUSE");
 	
 	return 0;

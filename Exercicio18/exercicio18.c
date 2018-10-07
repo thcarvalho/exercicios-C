@@ -7,18 +7,19 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	
-	float mul,kg;
+	int a, b, c;
 	
-	printf("Informe o peso total dos peixes:");
-	scanf("%f",&kg);
+	printf("Digite o valor de A:");
+	scanf("%d",&a);
+	printf("Digite o valor de B:");
+	scanf("%d",&b);	
 	
-	if(kg <= 50){
-		printf("\nNão haverá multa\n");
-	}else{
-		mul = (kg - 50)*4;
-		printf("\nA multa a ser cobrada é de: %.1f reais\n",mul);
-	}
+	c = b;
+	b = a;
+	a = c;
+	
+	printf("\nO valor de A é: %d,\ne o valor de B agora é: %d\n",a,b);
 	system("PAUSE");
-	
+
 	return 0;
 }

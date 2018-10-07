@@ -7,18 +7,21 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	
-	float mul,kg;
+	int anonasc,anoat,idade;
 	
-	printf("Informe o peso total dos peixes:");
-	scanf("%f",&kg);
+	printf("Informe o seu ano de nascimento:");
+	scanf("%d",&anonasc);
+	printf("\nInforme o ano atual:");
+	scanf("%d",&anoat);
 	
-	if(kg <= 50){
-		printf("\nNão haverá multa\n");
+	idade = anoat - anonasc;
+	
+	if(idade >= 18){
+		printf("\nVocê é maior de idade\n");
 	}else{
-		mul = (kg - 50)*4;
-		printf("\nA multa a ser cobrada é de: %.1f reais\n",mul);
+		printf("Você é menor de idade\n");
 	}
 	system("PAUSE");
-	
+
 	return 0;
 }

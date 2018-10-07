@@ -22,9 +22,13 @@ int main(int argc, char *argv[]) {
 	x1 = (-b+(sqrt(delta)))/2*a;
 	x2 = (-b-(sqrt(delta)))/2*a;
 	
+	if(delta < 0){
+		printf("O valor das raizes é invalido\n");
+	}else{
+	
 	printf("\nO valor de x1 é igual a: %.1f",x1);
 	printf("\nO valor de x2 é igual a: %.1f\n",x2);
-	
+	}
 	system("PAUSE");
 
 	return 0;

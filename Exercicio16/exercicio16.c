@@ -7,17 +7,15 @@
 int main(int argc, char *argv[]) {
 	setlocale(LC_ALL, "Portuguese");
 	
-	float mul,kg;
+	int num,suc,ant;
 	
-	printf("Informe o peso total dos peixes:");
-	scanf("%f",&kg);
+	printf("Digite um numero:");
+	scanf("%d",&num);
 	
-	if(kg <= 50){
-		printf("\nNão haverá multa\n");
-	}else{
-		mul = (kg - 50)*4;
-		printf("\nA multa a ser cobrada é de: %.1f reais\n",mul);
-	}
+	suc = ++num;
+	ant = num-=2;
+	
+	printf("\nO sucessor desse numero é: %d,\ne o antecessor é: %d\n",suc,ant);
 	system("PAUSE");
 	
 	return 0;
